@@ -1,17 +1,24 @@
 <?php
 
-    require 'Superhero.php';
-    require 'Avenger.php';
+    require 'pokemon.php';
+    require 'header.php';
 
-    $spiderman =  new Superhero('Spider-Man', 'Male', 'Spiderfriends', 'With great power comes great responsibility!');
+    $pokemon =  new pokemon('Piplip', 'water', '100', 'Water splash','gras' );
 
-    
-    print_r('<pre>'. $spiderman . '</pre>');
-    $spiderman->sayOneliner();
 
-    $thor = new Avenger('Thor', 'Male', 'For Asgard!');
-    $thor->sayOneliner();
-
-    print_r('<pre>' . $thor . '</pre>');
-
+    $pokemon->displayPokemon();
 ?>
+
+
+<html>
+    <body>
+        <div class='card d-flex flex-wrap align-content-center'>
+            <div class="card-body">
+                <h1 class='card-title'> Pokebattle </h1>
+                <p> selecteer pokemon </p>
+                <button type="button" class="btn btn-primary"> start battle </button>
+            </div>
+        </div>
+        
+    </body>
+</html>
