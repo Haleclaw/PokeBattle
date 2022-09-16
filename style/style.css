@@ -1,0 +1,23 @@
+*{
+	font-family: 'Pokemon Solid', sans-serif;
+}
+
+p{
+	font-size: 50px;
+}
+
+body{
+	background-image: url("../img/background.png");
+	background-size: cover !important;
+}
+
+.list-group-item-success{
+	opacity: 80% !important;
+}
+
+.card-body{
+	opacity: 100% !important;
+}
+
+
+

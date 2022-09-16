@@ -1,22 +1,31 @@
 <?php
 
     require 'pokemon.php';
+    require 'Pikachu.php';
+    require 'Charmeleon.php';
     require 'header.php';
 
-    $pokemon =  new pokemon('Piplip', 'water', '100', 'Water splash','gras' );
-
-
-    $pokemon->displayPokemon();
+    $pikachu = new pikachu();
+    $charmeleon = new charmeleon();
 ?>
 
 
 <html>
     <body>
-        <div class='card d-flex flex-wrap align-content-center'>
+        <div class='card d-flex flex-wrap align-content-center list-group-item-success' style='margin-left: 150px; margin-right: 150px;'>
             <div class="card-body">
                 <h1 class='card-title'> Pokebattle </h1>
-                <p> selecteer pokemon </p>
-                <button type="button" class="btn btn-primary"> start battle </button>
+
+                <div class="d-flex justify-content-between">
+                    <p class="badge badge-warning"> <?php echo $pikachu->name ?></p>
+                    <p>  VS  </p>
+                    <p class="badge badge-danger"> <?php echo $charmeleon->name ?></p>
+
+                </div>
+
+                <div class='text-center'>
+                    <button type="button" class="btn-lg btn-success "> Start battle </button>
+                </div> 
             </div>
         </div>
         

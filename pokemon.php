@@ -18,17 +18,9 @@ class pokemon {
 
     }
 
+
     public function __toString() {
         return json_encode($this);
-    }
-
-    public function displayPokemon()
-    {
-        echo '<p>' . $this->name . '</p>';
-        echo '<p>' . $this->EnergyType . '</p>';
-        echo '<p>' . $this->hitpoints . '</p>';
-        echo '<p>' . $this->Attacks . '</p>';
-        echo '<p>' . $this->Weakness . '</p>';
     }
 
 }
