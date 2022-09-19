@@ -17,9 +17,9 @@
                 <h1 class='card-title'> Pokebattle </h1>
 
                 <div class="d-flex justify-content-between">
-                    <p class="badge badge-warning"> <?php echo $pikachu->name ?></p>
+                    <p class="btn btn-warning"> <?php echo $pikachu->name ?></p>
                     <p>  VS  </p>
-                    <p class="badge badge-danger"> <?php echo $charmeleon->name ?></p>
+                    <p class="btn btn-danger"> <?php echo $charmeleon->name ?></p>
 
                 </div>
 
