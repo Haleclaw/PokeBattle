@@ -6,6 +6,7 @@
     require 'Pikachu.php';
     require 'Charmeleon.php';
     require 'header.php';
+    require 'function.php';
 
     // pokemon class // 
 
@@ -37,7 +38,7 @@
                             // if button is true then it shows the battle // 
 
                             if ($status == 'battle') {
-                                echo $pikachu->name . ' VS ' . $charmeleon->name ;
+                                pokemonFight($pikachu,$charmeleon);
                             }
 
                             else{
