@@ -25,6 +25,10 @@ class pokemon {
         return json_encode($this);
     }
 
+    public function getPopulation(){
+        
+    }
+
 }
 
 

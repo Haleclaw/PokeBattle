@@ -42,7 +42,21 @@
                             }
 
                             else{
-                            echo 'Er is nog geen data'; 
+                                echo 'Er is nog geen data'; 
+                            }
+                        ?>
+
+                    <h3 class='card-title'> levende pokemons </h3>
+
+                        <?php 
+                            // if button is true then it shows the living pokemons // 
+
+                            if ($status == 'battle') {
+                                echo 'nog geen function';
+                            }
+
+                            else{
+                                echo 'Er is nog geen data'; 
                             }
                         ?>
                      </div>
