@@ -6,10 +6,8 @@
     require 'Pikachu.php';
     require 'Charmeleon.php';
     require 'header.php';
-    require 'function.php';
 
     // pokemon class // 
-
     $pikachu = new pikachu();
     $charmeleon = new charmeleon();
 
@@ -25,7 +23,13 @@
             <div class="card-body">
                 <h1 class='card-title'> Pokebattle </h1>
 
+                <div class='d-flex justify-content-between'>
+                    <img id='icon' src="img/pikachu.png" alt="pikachu">
+                    <img id='icon' src="img/charmeleon.png" alt="charmeleon">
+                </div>
+
                 <div class="d-flex justify-content-between">
+                    
                     <p class="btn btn-warning"> <?php echo $pikachu->name ?></p>
                     <p>  VS  </p>
                     <p class="btn btn-danger"> <?php echo $charmeleon->name ?></p>
@@ -38,7 +42,7 @@
                             // if button is true then it shows the battle // 
 
                             if ($status == 'battle') {
-                                pokemonFight($pikachu,$charmeleon);
+                                $pikachu->pokemonFight($pikachu,$charmeleon);
                             }
 
                             else{
@@ -52,7 +56,8 @@
                             // if button is true then it shows the living pokemons // 
 
                             if ($status == 'battle') {
-                                echo 'nog geen function';
+                                $pikachu->getPopulation($pikachu,$charmeleon);
+
                             }
 
                             else{
