@@ -32,13 +32,17 @@ class pokemon
     {
         $pokemonsAlive = 2;
 
-        if ($pikachu->hitpoints == 0) {
-            $pokemonsAlive - 1;
+        if ($pikachu->hitpoints <= 0) {
+            $pokemonsAlive--;
+            echo $pokemonsAlive;
         }
 
-        if ($charmeleon->hitpoints == 0) {
-            $pokemonsAlive - 1;
-        } else {
+        if ($charmeleon->hitpoints <= 0) {
+            $pokemonsAlive--;
+            echo $pokemonsAlive;
+        } 
+        
+        else {
             echo $pokemonsAlive;
         }
     }
@@ -68,5 +72,17 @@ class pokemon
         // display hitpoints//
         echo "<br>";
         echo $pikachu->name . ' HP: '  . $pikachu->hitpoints . ' VS ' . $charmeleon->name . ' HP: ' . $charmeleon->hitpoints;
+
+        // Pikachu attacks // 
+        echo $pikachu->name . '  attack with ' . $pikachu->Attacks->attackName2;
+        $charmeleon->hitpoints = $charmeleon->hitpoints - $pikachu->Attacks->attackStats2;
+
+        // display hitpoints//
+        echo "<br>";
+        echo $pikachu->name . ' HP: '  . $pikachu->hitpoints . ' VS ' . $charmeleon->name . ' HP: ' . $charmeleon->hitpoints;
+
+        
+        
+        
     }
 }
