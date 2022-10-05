@@ -36,7 +36,6 @@
                 </div>
 
                     <div class='card-body'>
-                    <h2 class='card-title'> battle info </h2>
 
                         <?php 
                             // if button is true then it shows the battle // 
@@ -46,22 +45,22 @@
                             }
 
                             else{
-                                echo 'Er is nog geen data'; 
+                                echo ''; 
                             }
                         ?>
-
-                    <h3 class='card-title'> levende pokemons </h3>
 
                         <?php 
                             // if button is true then it shows the living pokemons // 
 
                             if ($status == 'battle') {
+                                echo '<h3> aantal levende pokemons: </h3>';
+                                echo '<br>';
                                 $pikachu->getPopulation($pikachu,$charmeleon);
 
                             }
 
                             else{
-                                echo 'Er is nog geen data'; 
+                                echo ''; 
                             }
                         ?>
                      </div>
