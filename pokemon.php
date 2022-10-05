@@ -56,7 +56,7 @@ class pokemon
         echo "<br>";
 
         // Pikachu attacks // 
-        echo $pikachu->getName() . '  attack with ' . $pikachu->getAttack->attackName;
+        echo $pikachu->getName() . '  attack with ' . $pikachu->Attacks->attackName;
         $updatedHitpoints = $charmeleon->hitpoints - $pikachu->Attacks->attackStats;
         $charmeleon->setHitpoints($updatedHitpoints); 
 
