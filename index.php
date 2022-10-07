@@ -3,6 +3,7 @@
     // all requires //
 
     require 'pokemon.php';
+    require 'pokemonBattle.php';
     require 'Pikachu.php';
     require 'Charmeleon.php';
     require 'header.php';
@@ -10,6 +11,7 @@
     // pokemon class // 
     $pikachu = new pikachu();
     $charmeleon = new charmeleon();
+    $pokemonBattle = new pokemonBattle();
 
     // status page // 
 
@@ -30,9 +32,9 @@
 
                 <div class="d-flex justify-content-between">
                     
-                    <p class="btn btn-warning"> <?php echo $pikachu->name ?></p>
+                    <p class="btn btn-warning"> <?php echo $pikachu->getname() ?></p>
                     <p>  VS  </p>
-                    <p class="btn btn-danger"> <?php echo $charmeleon->name ?></p>
+                    <p class="btn btn-danger"> <?php echo $charmeleon->getname() ?></p>
                 </div>
 
                     <div class='card-body'>
@@ -41,7 +43,7 @@
                             // if button is true then it shows the battle // 
 
                             if ($status == 'battle') {
-                                $pikachu->pokemonFight($pikachu,$charmeleon);
+                                $pokemonBattle->pokemonFight($pikachu,$charmeleon);
                             }
 
                             else{

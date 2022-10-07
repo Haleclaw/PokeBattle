@@ -3,12 +3,12 @@
 class pokemon
 {
 
-    public $name;
-    public $EnergyType;
+    private $name;
+    private $EnergyType;
     public $hitpoints;
-    public $Attacks;
-    public $Weakness;
-    public $Resistance;
+    private $Attacks;
+    private $Weakness;
+    private $Resistance;
 
     public function __construct($name, $EnergyType, $hitpoints, $Attacks, $Weakness, $Resistance)
     {
@@ -40,54 +40,47 @@ class pokemon
         if ($charmeleon->gethitpoints() <= 0) {
             $pokemonsAlive--;
             echo $pokemonsAlive;
-        } 
-        
-        else {
+        } else {
             echo $pokemonsAlive;
         }
     }
 
+    // all get //
 
-    // this function let the pokemons fight and return the result //
-    function pokemonFight($pikachu, $charmeleon)
+    public function getName()
     {
-        // display hitpoints//
-        echo $pikachu->getName() . ' HP: '  . $pikachu->getHitpoints() . ' VS ' . $charmeleon->getName() . ' HP: ' . $charmeleon->getHitpoints();
-        echo "<br>";
+        return $this->name;
+    }
 
-        // Pikachu attacks // 
-        echo $pikachu->getName() . '  attack with ' . $pikachu->Attacks->attackName;
-        $updatedHitpoints = $charmeleon->hitpoints - $pikachu->Attacks->attackStats;
-        $charmeleon->setHitpoints($updatedHitpoints); 
+    public function getEneryType()
+    {
+        return $this->EnergyType;
+    }
 
+    public function getHitpoints()
+    {
+        return $this->hitpoints;
+    }
 
-        // display hitpoints//
-        echo "<br>";
-        echo $pikachu->getName() . ' HP: '  . $pikachu->getHitpoints() . ' VS ' . $charmeleon->getName() . ' HP: ' . $charmeleon->getHitpoints();
+    public function getAttacks()
+    {
+        return $this->Attacks;
+    }
 
+    public function getWeakness()
+    {
+        return $this->Weakness;
+    }
 
-        // charmeleon attacks //
-        echo "<br>";
-        echo $charmeleon->getName() . '  attack with ' . $charmeleon->Attacks->attackName2;
-        $updatedHitpoints = $pikachu->hitpoints - $charmeleon->Attacks->attackStats2;
-        $pikachu->setHitpoints($updatedHitpoints); 
+    public function getResistance()
+    {
+        return $this->Resistance;
+    }
 
-        // display hitpoints//
-        echo "<br>";
-        echo $pikachu->getName() . ' HP: '  . $pikachu->getHitpoints(). ' VS ' . $charmeleon->getName() . ' HP: ' . $charmeleon->getHitpoints();
+    // all set //
 
-        // Pikachu attacks // 
-        echo '<br>';
-        echo $pikachu->getName() . '  attack with ' . $pikachu->Attacks->attackName2;
-        $updatedHitpoints = $charmeleon->hitpoints - $pikachu->Attacks->attackStats2;
-        $charmeleon->setHitpoints($updatedHitpoints); 
-
-        // display hitpoints//
-        echo "<br>";
-        echo $pikachu->getName() . ' HP: '  . $pikachu->getHitpoints() . ' VS ' . $charmeleon->getName() . ' HP: ' . $charmeleon->getHitpoints();
-
-        
-        
-        
+    public function setHitpoints($updatedHitpoints)
+    {
+        $this->hitpoints = $updatedHitpoints;
     }
 }
