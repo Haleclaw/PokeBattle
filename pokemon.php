@@ -5,7 +5,7 @@ class pokemon
 
     private $name;
     private $EnergyType;
-    public $hitpoints;
+    private $hitpoints;
     private $Attacks;
     private $Weakness;
     private $Resistance;
@@ -43,6 +43,7 @@ class pokemon
         } else {
             echo $pokemonsAlive;
         }
+        
     }
 
     // all get //

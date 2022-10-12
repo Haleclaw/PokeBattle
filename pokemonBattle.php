@@ -10,8 +10,8 @@ class pokemonBattle{
         echo "<br>";
 
         // Pikachu attacks // 
-        echo $pikachu->getName() . '  attack with ' . $pikachu->getAttacks()->attackName;
-        $updatedHitpoints = $charmeleon->hitpoints - $pikachu->getAttacks()->attackStats;
+        echo $pikachu->getName() . '  attack with ' . $pikachu->getAttacks()->getAttackName();
+        $updatedHitpoints = $charmeleon->getHitpoints() - $pikachu->getAttacks()->getAttackStats();
         $charmeleon->setHitpoints($updatedHitpoints);
 
 
@@ -22,8 +22,8 @@ class pokemonBattle{
 
         // charmeleon attacks //
         echo "<br>";
-        echo $charmeleon->getName() . '  attack with ' . $charmeleon->getAttacks()->attackName2;
-        $updatedHitpoints = $pikachu->hitpoints - $charmeleon->getAttacks()->attackStats2;
+        echo $charmeleon->getName() . '  attack with ' . $charmeleon->getAttacks()->getAttackName2();
+        $updatedHitpoints = $pikachu->getHitpoints() - $charmeleon->getAttacks()->getAttackStats2();
         $pikachu->setHitpoints($updatedHitpoints);
 
         // display hitpoints//
@@ -32,8 +32,8 @@ class pokemonBattle{
 
         // Pikachu attacks // 
         echo '<br>';
-        echo $pikachu->getName() . '  attack with ' . $pikachu->getAttacks()->attackName2;
-        $updatedHitpoints = $charmeleon->hitpoints - $pikachu->getAttacks()->attackStats2;
+        echo $pikachu->getName() . '  attack with ' . $pikachu->getAttacks()->getAttackName2();
+        $updatedHitpoints = $charmeleon->getHitpoints() - $pikachu->getAttacks()->getAttackStats2();
         $charmeleon->setHitpoints($updatedHitpoints);
 
         // display hitpoints//

@@ -2,15 +2,20 @@
 
 class energytype {
 
-    public $enerytype;
+    private $enerytype;
 
     public function __construct($enerytype){
 
         $this->enerytype = $enerytype;
 
-
-        
     }
+
+    public function getEnergyType()
+    {
+        return $this->enerytype;
+    }
+
+    
 
 
 
